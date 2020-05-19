@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.scss";
+import overlay from "./songs/overlay.wav";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import SongList from "./components/SongList";
+import CreateMixButton from "./components/CreateMixButton";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      url: overlay,
+      songs: [
+        {
+          title: "Summer",
+          artist: "Calvin Harris",
+        },
+        {
+          title: "Right Round",
+          artist: "Flo Rida",
+        },
+        {
+          title: "Miami 82",
+          artist: "Syn Cole",
+        },
+        {
+          title: "Nights Like This",
+          artist: "Loud Luxury",
+        },
+      ],
+    };
+  }
+  audio = new Audio(overlay);
+
+  createMix = () => {
+    console.log("creating a mix");
+    this.audio.play();
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <div>Hello World</div>
+        <SongList songs={this.state.songs} />
+        <CreateMixButton createMix={this.createMix} />
+      </div>
+    );
+  }
 }
 
 export default App;
