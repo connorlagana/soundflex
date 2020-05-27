@@ -10,7 +10,7 @@ def mixNewSong(x, y):
     sound2 = AudioSegment.from_file("../../../sf-backend/songs/aud2.wav")
     sound3 = AudioSegment.from_file("../../../sf-backend/songs/aud3.wav")
     combined = sound1.overlay(sound2).overlay(sound3)
-    combined.export("mixmash3.wav", format='wav')
+    combined.export("mixmash4.wav", format='wav')
 
 
 print('Sup bitch')

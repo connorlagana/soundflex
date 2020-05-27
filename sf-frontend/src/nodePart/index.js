@@ -5,7 +5,11 @@ const port = 3001;
 app.get("/", (req, res) => {
   var dataToSend;
   // spawn new child process to call the python script
-  const python = spawn("python3", ["mash.py"]);
+  const python = spawn("python3", [
+    "mash2.py",
+    "sending this from node",
+    "this is also from node",
+  ]);
   // collect data from script
   python.stdout.on("data", function (data) {
     console.log("Pipe data from python script ...");
