@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./App.scss";
 import overlay from "./songs/overlay.wav";
 
+// import pyScript from "./nodePart/mash.py";
+
+import axios from "axios";
+
 import SongList from "./components/SongList";
 import CreateMixButton from "./components/CreateMixButton";
 
@@ -33,9 +37,10 @@ class App extends Component {
   }
   audio = new Audio(overlay);
 
-  createMix = () => {
+  createMix = async () => {
     console.log("creating a mix");
-    this.audio.play();
+    // this.audio.play();
+    axios.post("http://localhost:3001");
   };
 
   render() {
