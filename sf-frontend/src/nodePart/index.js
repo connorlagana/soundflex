@@ -2,13 +2,31 @@ const express = require("express");
 const { spawn } = require("child_process");
 const app = express();
 const port = 3001;
+
+const arrobj = [
+  {
+    title: "Stupid Horse",
+    artist: "100 Gecs",
+    bpm: 98,
+  },
+  {
+    title: "Hey Brother",
+    artist: "Avicii",
+    bpm: 124,
+  },
+];
+
 app.get("/", (req, res) => {
   var dataToSend;
   // spawn new child process to call the python script
   const python = spawn("python3", [
-    "mash2.py",
-    "sending this from node",
-    "this is also from node",
+    "mash.py",
+    "instrumental1",
+    "firstV1",
+    "secondV1",
+    "vox1",
+    "drop1",
+    "chorus1",
   ]);
   // collect data from script
   python.stdout.on("data", function (data) {
