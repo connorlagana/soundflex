@@ -6,22 +6,22 @@ import sys
 def mixNewSong(instrumental, firstV, secondV, vox, drop, chorus):
 
     instrumentalWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + instrumental + ".wav")
+        "../../../sf-backend/songs/" + instrumental + "_1.wav")
     firstVWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + firstV + ".wav")
+        "../../../sf-backend/songs/" + firstV + "_1.wav")
     secondVWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + secondV + ".wav")
+        "../../../sf-backend/songs/" + secondV + "_1.wav")
     voxWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + vox + ".wav")
+        "../../../sf-backend/songs/" + vox + "_1.wav")
     dropWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + drop + ".wav")
+        "../../../sf-backend/songs/" + drop + "_1.wav")
     chorusWav = AudioSegment.from_file(
-        "../../../sf-backend/songs/" + chorus + ".wav")
+        "../../../sf-backend/songs/" + chorus + "_1.wav")
     combined = dropWav.overlay(firstVWav).overlay(
         secondVWav).overlay(voxWav).overlay(instrumentalWav).overlay(chorusWav)
-    combined.export("titleOf7.wav", format='wav')
+    combined.export("titleOf11.wav", format='wav')
 
 
 # mixNewSong(sys.argv[1], sys.argv[2], sys.argv[3],
 #            sys.argv[4], sys.argv[5], sys.argv[6])
-mixNewSong("instrumental2", "firstV2", "secondV2", "vox2", "drop2", "chorus2")
+mixNewSong("instrumental3", "firstV2", "secondV2", "vox3", "drop1", "chorus1")
