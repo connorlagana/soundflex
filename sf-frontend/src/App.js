@@ -17,32 +17,38 @@ class App extends Component {
       url: overlay,
       songs: [
         {
-          title: "Summer",
-          artist: "Calvin Harris",
+          title: "IDWK",
+          artist: "blackbear",
+          mp3Id: "hf6G7EdLvPM",
+          type: "chorus",
         },
         {
-          title: "Right Round",
-          artist: "Flo Rida",
+          title: "Tired",
+          artist: "Alan Walker",
+          mp3Id: "5PS4AV1VWDh",
+          type: "instrumental",
         },
         {
-          title: "Miami 82",
-          artist: "Syn Cole",
-        },
-        {
-          title: "Nights Like This",
-          artist: "Loud Luxury",
+          title: "idk the name lol",
+          artist: "Galantis",
+          mp3Id: "8fmmlMH404Y",
+          type: "instrumental",
         },
       ],
+      chosenSong: "",
     };
   }
-  audio = new Audio(overlay);
 
   createMix = async () => {
     console.log("creating a mix");
 
-    await axios.post("http://localhost:3001");
+    // await axios.get("http://localhost:3001");
 
-    this.audio.play();
+    let songCreated = `https://media.vocaroo.com/mp3/${this.state.songs[2].mp3Id}`;
+
+    let audio = new Audio(songCreated);
+
+    audio.play();
   };
 
   render() {

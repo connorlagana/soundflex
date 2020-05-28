@@ -21,12 +21,13 @@ app.get("/", (req, res) => {
   // spawn new child process to call the python script
   const python = spawn("python3", [
     "mash.py",
-    "instrumental1",
+    "instrumental2",
     "firstV1",
     "secondV1",
     "vox1",
     "drop1",
     "chorus1",
+    "titleOf14",
   ]);
   // collect data from script
   python.stdout.on("data", function (data) {
@@ -41,6 +42,6 @@ app.get("/", (req, res) => {
   });
 });
 app.listen(port, () =>
-  console.log(`Example app listening on port 
+  console.log(`Soundflex Backend: 
 ${port}!`)
 );
