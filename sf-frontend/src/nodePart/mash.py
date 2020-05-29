@@ -24,4 +24,5 @@ def mixNewSong(instrumental, firstV, secondV, vox, drop, chorus, name):
 
 mixNewSong(sys.argv[1], sys.argv[2], sys.argv[3],
            sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
-# mixNewSong("instrumental3", "firstV2", "secondV2", "vox3", "drop1", "chorus1")
+# mixNewSong("instrumental3", "firstV2", "secondV2",
+#            "vox3", "drop1", "chorus1", "titleOf20")

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.scss";
 import overlay from "./nodePart/mixmash3.wav";
 
+import makeNewMix from "./services/api_helper";
+
 // import pyScript from "./nodePart/mash.py";
 
 import axios from "axios";
@@ -39,16 +41,32 @@ class App extends Component {
     };
   }
 
-  createMix = async () => {
+  obj = {
+    instrumental: "BIGBOOT",
+    firstV: "firstV1",
+    secondV: "secondV1",
+    vox: "vox1",
+    drop: "drop1",
+    chorus: "chorus1",
+    name: "titlesex",
+  };
+
+  createMix = async (e, musicData) => {
+    e.preventDefault();
     console.log("creating a mix");
+    console.log(this.obj);
 
-    // await axios.get("http://localhost:3001");
+    makeNewMix({
+      instrumental: "KanyeWest",
+    });
 
-    let songCreated = `https://media.vocaroo.com/mp3/${this.state.songs[2].mp3Id}`;
+    axios.post("http://localhost:3001");
 
-    let audio = new Audio(songCreated);
+    // let songCreated = `https://media.vocaroo.com/mp3/${this.state.songs[2].mp3Id}`;
 
-    audio.play();
+    // let audio = new Audio(songCreated);
+
+    // audio.play();
   };
 
   render() {

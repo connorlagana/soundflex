@@ -3,31 +3,31 @@ const { spawn } = require("child_process");
 const app = express();
 const port = 3001;
 
-const arrobj = [
-  {
-    title: "Stupid Horse",
-    artist: "100 Gecs",
-    bpm: 98,
-  },
-  {
-    title: "Hey Brother",
-    artist: "Avicii",
-    bpm: 124,
-  },
-];
+// const cors = require("cors");
+const bodyParser = require("body-parser");
+// const logger = require("morgan");
 
-app.get("/", (req, res) => {
+// const userRouter = require("./router.js");
+
+// app.use(cors());
+// app.use(logger("dev"));
+app.use(bodyParser.json());
+
+// app.use("/", userRouter);
+
+app.post("/", (req, res) => {
   var dataToSend;
+  console.log("ookay", req.body.vox);
   // spawn new child process to call the python script
   const python = spawn("python3", [
-    "mash.py",
-    "instrumental2",
-    "firstV1",
+    "mash2.py",
+    req.body.vox,
+    "firstV3",
     "secondV1",
     "vox1",
     "drop1",
     "chorus1",
-    "titleOf14",
+    "titleOf16",
   ]);
   // collect data from script
   python.stdout.on("data", function (data) {
@@ -41,6 +41,7 @@ app.get("/", (req, res) => {
     res.send(dataToSend);
   });
 });
+
 app.listen(port, () =>
   console.log(`Soundflex Backend: 
 ${port}!`)
