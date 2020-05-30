@@ -12,6 +12,7 @@ class Artist extends Component {
           <div className="artist">
             <div id="artistTitle">{artist.artist}</div>
             <img src="https://vignette.wikia.nocookie.net/artists-i-follow/images/9/92/Kygo2019.JPG/revision/latest?cb=20190627210746" />
+            <button>Add to mix</button>
           </div>
         ))}
       </div>

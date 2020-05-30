@@ -33,14 +33,17 @@ class App extends Component {
             {
               artist: "Alan Walker",
               name: "Tired",
+              wavTitle: "instrumental1",
             },
             {
               artist: "Galantis",
               name: "Idk",
+              wavTitle: "instrumental2",
             },
             {
               artist: "Martin Garrix",
               name: "I Forgot",
+              wavTitle: "instrumental3",
             },
           ],
         },
@@ -48,16 +51,99 @@ class App extends Component {
           title: "First Verses",
           songs: [
             {
-              artist: "hihdi",
-              name: "Tired",
+              artist: "AJ Mitchell",
+              name: "Slow Dance",
+              wavTitle: "firstV1",
             },
             {
-              artist: "ffff",
-              name: "Idk",
+              artist: "Aloe Blacc",
+              name: "Wake Me Up",
+              wavTitle: "firstV2",
             },
             {
-              artist: "klkokomfd",
+              artist: "Aloe Blacc",
               name: "I Forgot",
+              wavTitle: "firstV3",
+            },
+          ],
+        },
+        {
+          title: "Second Verses",
+          songs: [
+            {
+              artist: "Pink",
+              name: "Get This Party Started",
+              wavTitle: "secondV1",
+            },
+            {
+              artist: "Lil Wayne",
+              name: "Down",
+              wavTitle: "secondV2",
+            },
+            {
+              artist: "Trevor Daniel",
+              name: "Falling",
+              wavTitle: "secondV3",
+            },
+          ],
+        },
+        {
+          title: "Adlibs",
+          songs: [
+            {
+              artist: "Vine",
+              name: "2 shots of vodka",
+              wavTitle: "vox1",
+            },
+            {
+              artist: "Shrek",
+              name: "Waffles",
+              wavTitle: "vox2",
+            },
+            {
+              artist: "Michelle Obama",
+              name: "Sweet Potato",
+              wavTitle: "vox3",
+            },
+          ],
+        },
+        {
+          title: "Drops",
+          songs: [
+            {
+              artist: "Raven & Kreyn",
+              name: "idk",
+              wavTitle: "drop1",
+            },
+            {
+              artist: "Alan Walker",
+              name: "idk",
+              wavTitle: "drop2",
+            },
+          ],
+        },
+        {
+          title: "Choruses",
+          songs: [
+            {
+              artist: "Blackbear",
+              name: "Idwk",
+              wavTitle: "chorus1",
+            },
+            {
+              artist: "Owl City",
+              name: "Verge",
+              wavTitle: "chorus2",
+            },
+            {
+              artist: "Pink",
+              name: "Get This Party Started",
+              wavTitle: "chorus3",
+            },
+            {
+              artist: "AJ Mitchell",
+              name: "Slow Dance",
+              wavTitle: "chorus4",
             },
           ],
         },

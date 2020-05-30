@@ -1,5 +1,5 @@
 .App {
-  background-color: black;
+  // background-color: black;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -7,16 +7,25 @@
   align-items: center;
   flex-direction: column;
   #title {
-    font-size: 6vh;
-    color: white;
+    font-size: 7vh;
+    font-weight: 700;
+    color: black;
   }
 }
 
 .types {
   width: 100vw;
-  .type {
+  & .type {
     background-color: gray;
     margin: 2vh;
+    padding: 1vh;
+
+    & #chooseFrom {
+      font-size: 3vh;
+      text-decoration: underline;
+      color: white;
+      font-weight: 700;
+    }
   }
 }
 
@@ -27,7 +36,7 @@
   flex-direction: row;
 
   & .artist {
-    height: 25vh;
+    height: 30vh;
     width: 16vw;
     display: flex;
     justify-content: center;
@@ -40,9 +49,28 @@
     }
 
     & img {
-      height: 20vh;
-      width: 14vw;
+      height: 22vh;
+      width: 12vw;
       object-fit: cover;
+    }
+
+    & button {
+      height: 4vh;
+      width: 6vw;
+      margin-top: 1vh;
+      box-shadow: none;
+      border: none;
+      border-radius: 1vh;
+      background-color: white;
+      color: black;
+      font-size: 1.2vh;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    & button:hover {
+      background-color: black;
+      color: white;
     }
   }
 }
