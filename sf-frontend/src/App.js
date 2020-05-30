@@ -56,9 +56,8 @@ class App extends Component {
     console.log("creating a mix");
     console.log(this.obj);
 
-    makeNewMix({
-      instrumental: "KanyeWest",
-    });
+    await makeNewMix(musicData);
+    console.log("herro");
 
     axios.post("http://localhost:3001");
 

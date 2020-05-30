@@ -17,17 +17,17 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
   var dataToSend;
-  console.log("ookay", req.body.vox);
+  console.log("ookay", req.body);
   // spawn new child process to call the python script
   const python = spawn("python3", [
-    "mash2.py",
+    "mash.py",
+    req.body.instrumental,
+    req.body.firstV,
+    req.body.secondV,
     req.body.vox,
-    "firstV3",
-    "secondV1",
-    "vox1",
-    "drop1",
-    "chorus1",
-    "titleOf16",
+    req.body.drop,
+    req.body.chorus,
+    req.body.name,
   ]);
   // collect data from script
   python.stdout.on("data", function (data) {

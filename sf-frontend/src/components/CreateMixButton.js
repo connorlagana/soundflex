@@ -1,11 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
 
-const CreateMixButton = (props) => {
-  return (
-    <div>
-      <button onClick={props.createMix}>Create Mix</button>
-    </div>
-  );
-};
+class CreateMixButton extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      obj: {
+        vox: "fuck",
+      },
+    };
+  }
+
+  handleMix = (e) => {
+    console.log("outchea");
+    this.props.createMix(e, {
+      vox: "lonely",
+    });
+  };
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleMix}>Create Mix</button>
+      </div>
+    );
+  }
+}
 
 export default CreateMixButton;
