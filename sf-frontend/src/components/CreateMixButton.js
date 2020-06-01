@@ -12,7 +12,6 @@ class CreateMixButton extends Component {
   }
 
   handleMix = (e) => {
-    console.log("outchea");
     this.props.createMix(e, {
       vox: "lonely",
     });
