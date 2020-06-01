@@ -202,14 +202,30 @@ class App extends Component {
     e.preventDefault();
 
     let count = 0;
+    let low = 10000;
 
     for (const el in this.state.mix) {
       // console.log(this.state.mix[el]);
 
-      for (const j in this.state.mix[el]) {
-        count += 1;
-      }
+      // for (const j in this.state.mix[el]) {
+      //   count += 1;
+      // }
+      count = this.state.mix[el].length;
+
       console.log(count);
+      if (count < low) {
+        low = count;
+      }
+
+      count = 0;
+    }
+
+    //This is the maximum amount of songs we can make from the users selection
+    console.log("the lowest number is: " + low);
+
+    for (const el in this.state.mix) {
+      // console.log(this.state.mix[el]);
+      // console.log
     }
 
     // axios.post("http://localhost:3001", this.state.mix);
